@@ -19,10 +19,29 @@
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
+
+    <!-- Logout button -->
+    <ion-button @click="logout" expand="full">Logout</ion-button>
   </ion-page>
 </template>
 
 <script setup>
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
+import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet, IonButton } from '@ionic/vue';
 import { desktop, key, people } from 'ionicons/icons';
+import { getAuth, signOut } from 'firebase/auth';
+import router from '../router/index';
+
+const logout = async () => {
+  try {
+    const auth = getAuth();
+    await signOut(auth);
+
+    // Navigate to the login page or any other desired route
+    router.push('/login'); // Replace '/login' with the desired route path
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode, errorMessage);
+  }
+};
 </script>
