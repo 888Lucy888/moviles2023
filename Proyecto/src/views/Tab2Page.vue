@@ -21,18 +21,18 @@
             <div>Semestre</div>
           </ion-col>
         </ion-row>
-        <ion-row v-for="(item,index) in listaUsuarios" :key="index">
+        <ion-row v-for="(item, index) in listaUsuarios" :key="index">
           <ion-col>
             <div>{{ listaKeys[index] }}</div>
           </ion-col>
           <ion-col>
-            <div>{{item.nombre}}</div>
+            <div>{{ item.nombre }}</div>
           </ion-col>
           <ion-col>
-            <div>{{item.carrera}}</div>
+            <div>{{ item.carrera }}</div>
           </ion-col>
           <ion-col>
-            <div>{{item.semestre}}</div>
+            <div>{{ item.semestre }}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -88,8 +88,11 @@ export default {
 };
 </script>
 
-<style>ion-col>div {
-  background-color: #f7f7f7;
-  border: solid 1px #ddd;
+<style>
+ion-col>div {
+  background-color: #2c074d;
+  border: solid 1px #df9ef0;
+  color: #d18ec5;
   padding: 10px;
-}</style>
+}
+</style>

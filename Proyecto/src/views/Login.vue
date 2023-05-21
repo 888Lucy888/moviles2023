@@ -17,7 +17,7 @@
         <ion-input v-model="password" type="password" placeholder="Enter your password"></ion-input>
       </ion-item>
 
-      <ion-button expand="full" @click="login" :disabled="isLoading">Login</ion-button>
+      <ion-button class="bold-button" expand="full" @click="login" :disabled="isLoading">Login</ion-button>
 
       <ion-text v-if="error" color="danger" class="ion-padding-top">
         {{ error }}
@@ -67,3 +67,9 @@ async function login() {
   }
 }
 </script>
+
+<style>
+.bold-button {
+  font-weight: bold;
+}
+</style>

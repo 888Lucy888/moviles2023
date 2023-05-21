@@ -21,7 +21,7 @@
     </ion-tabs>
 
     <!-- Logout button -->
-    <ion-button @click="logout" expand="full">Logout</ion-button>
+    <ion-button @click="logout" class="bold-button" expand="full">Logout</ion-button>
   </ion-page>
 </template>
 
@@ -45,3 +45,9 @@ const logout = async () => {
   }
 };
 </script>
+
+<style>
+.bold-button {
+  font-weight: bold;
+}
+</style>

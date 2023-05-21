@@ -25,15 +25,15 @@
             <div>Usuario</div>
           </ion-col>
         </ion-row>
-        <ion-row v-for="(item,index) in listaClaves" :key="index">
+        <ion-row v-for="(item, index) in listaClaves" :key="index">
           <ion-col>
             <div>{{ listaKeys[index] }}</div>
           </ion-col>
           <ion-col>
-            <div>{{item.status}}</div>
+            <div>{{ item.status }}</div>
           </ion-col>
           <ion-col>
-            <div>{{item.usuario}}</div>
+            <div>{{ item.usuario }}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -89,8 +89,11 @@ export default {
 };
 </script>
 
-<style>ion-col>div {
-  background-color: #f7f7f7;
-  border: solid 1px #ddd;
+<style>
+ion-col>div {
+  background-color: #2c074d;
+  border: solid 1px #df9ef0;
+  color: #d18ec5;
   padding: 10px;
-}</style>
+}
+</style>
