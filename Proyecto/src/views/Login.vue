@@ -12,13 +12,13 @@
       </div>
 
       <ion-item>
-        <ion-label position="stacked">Email</ion-label>
-        <ion-input v-model="email" type="email" placeholder="Enter your email"></ion-input>
+        <ion-label position="stacked" class="login">Email</ion-label>
+        <ion-input class="login" v-model="email" type="email" placeholder="Enter your email"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input v-model="password" type="password" placeholder="Enter your password"></ion-input>
+        <ion-label class="login" position="stacked">Password</ion-label>
+        <ion-input class="login" v-model="password" type="password" placeholder="Enter your password"></ion-input>
       </ion-item>
 
       <ion-button class="bold-button" expand="full" @click="login" :disabled="isLoading">Login</ion-button>
@@ -74,6 +74,10 @@ async function login() {
 
 
 <style>
+.login {
+  font-size: 14px;
+}
+
 .bold-button {
   font-weight: bold;
 }
