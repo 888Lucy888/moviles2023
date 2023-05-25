@@ -7,6 +7,10 @@
     </ion-header>
 
     <ion-content class="ion-padding">
+      <div class="logo-container">
+        <img src="../images/logo.png" alt="Logo">
+      </div>
+
       <ion-item>
         <ion-label position="stacked">Email</ion-label>
         <ion-input v-model="email" type="email" placeholder="Enter your email"></ion-input>
@@ -68,8 +72,19 @@ async function login() {
 }
 </script>
 
+
 <style>
 .bold-button {
   font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  max-width: 200px;
 }
 </style>

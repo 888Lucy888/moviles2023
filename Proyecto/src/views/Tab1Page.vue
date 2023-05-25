@@ -27,13 +27,13 @@
         </ion-row>
         <ion-row v-for="(item, index) in listaClaves" :key="index">
           <ion-col>
-            <div>{{ listaKeys[index] }}</div>
+            <div class="smaller-text">{{ listaKeys[index] }}</div>
           </ion-col>
           <ion-col>
-            <div>{{ item.status }}</div>
+            <div class="small-text">{{ item.status }}</div>
           </ion-col>
           <ion-col>
-            <div>{{ item.usuario }}</div>
+            <div class="small-text">{{ item.usuario }}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -90,8 +90,16 @@ export default {
 </script>
 
 <style>
+.smaller-text {
+  font-size: 8px;
+}
+
+.small-text {
+  font-size: 10px;
+}
+
 ion-col>div {
-  background-color: #2c074d;
+  background-color: #000000;
   border: solid 1px #df9ef0;
   color: #d18ec5;
   padding: 10px;

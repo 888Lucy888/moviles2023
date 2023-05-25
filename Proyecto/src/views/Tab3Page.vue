@@ -73,8 +73,8 @@ export default defineComponent({
       var errores = 0;
       for (i = 0; i < this.claves; i++) {
         push(ref(db, "claves/"), {
-          status: "generada",
-          usuario: "testUser",
+          status: "disponible",
+          usuario: "noLigado",
         })
           .then(async () => {
             console.log("Claves agregadas " + errores + " errores");
