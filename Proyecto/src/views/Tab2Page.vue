@@ -9,24 +9,24 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <div class="title">Usuario</div>
+            <div class="title">Nombre</div>
           </ion-col>
           <ion-col>
-            <div class="title">Nombre</div>
+            <div class="title">Apellido</div>
           </ion-col>
           <ion-col>
             <div class="title">Carrera</div>
           </ion-col>
           <ion-col>
-            <div>Semestre</div>
+            <div class="title">Semestre</div>
           </ion-col>
         </ion-row>
         <ion-row v-for="(item, index) in listaUsuarios" :key="index">
           <ion-col>
-            <div class="small-text">{{ listaKeys[index] }}</div>
+            <div class="small-text">{{ item.nombre }}</div>
           </ion-col>
           <ion-col>
-            <div class="small-text">{{ item.nombre }}</div>
+            <div class="small-text">{{ item.apellido }}</div>
           </ion-col>
           <ion-col>
             <div class="small-text">{{ item.carrera }}</div>
@@ -66,7 +66,7 @@ export default {
   },
   mounted() {
     const db = getDatabase();
-    const starCountRef = ref(db, "usuarios/");
+    const starCountRef = ref(db, "usuario/");
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
       console.log(data);
@@ -90,7 +90,7 @@ export default {
 
 <style>
 .small-text {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .title {
@@ -101,6 +101,6 @@ ion-col>div {
   background-color: #000000;
   border: solid 1px #df9ef0;
   color: #d18ec5;
-  padding: 10px;
+  padding: 8px;
 }
 </style>
