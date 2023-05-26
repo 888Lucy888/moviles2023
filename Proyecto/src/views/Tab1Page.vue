@@ -53,6 +53,7 @@ import {
   IonRow,
 } from "@ionic/vue";
 import { getDatabase, ref, onValue } from "firebase/database";
+import { getAuth } from 'firebase/auth';
 export default {
   name: "Tab1",
   components: {
@@ -67,6 +68,7 @@ export default {
   },
   mounted() {
     const db = getDatabase();
+    const auth = getAuth();
     const starCountRef = ref(db, "claves/");
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();

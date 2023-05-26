@@ -88,7 +88,7 @@ export default defineComponent({
             errores++;
             this.titulo = "Error en agregar claves"
             this.subtitulo = "Error al agregar claves"
-            this.mensaje = "Error al agregar " + this.claves.toString() + "claves"
+            this.mensaje = "Error al agregar " + this.claves.toString() + " claves"
             this.alerta = true
           });
       }
