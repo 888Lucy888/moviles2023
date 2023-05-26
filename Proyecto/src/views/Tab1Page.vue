@@ -33,7 +33,7 @@
             <div class="small-text">{{ item.status }}</div>
           </ion-col>
           <ion-col>
-            <div class="small-text">{{ item.usuario }}</div>
+            <div class="smaller-text">{{ item.usuario }}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -91,7 +91,7 @@ export default {
 
 <style>
 .smaller-text {
-  font-size: 8px;
+  font-size: 7px;
 }
 
 .small-text {

@@ -23,9 +23,7 @@
 
       <ion-button class="bold-button" expand="full" @click="login" :disabled="isLoading">Login</ion-button>
 
-      <ion-text v-if="error" color="danger" class="ion-padding-top">
-        {{ error }}
-      </ion-text>
+
     </ion-content>
   </ion-page>
 </template>

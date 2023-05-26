@@ -23,16 +23,16 @@
         </ion-row>
         <ion-row v-for="(item, index) in listaUsuarios" :key="index">
           <ion-col>
-            <div class="small-text">{{ item.nombre }}</div>
+            <div class="small-text">{{ item.name }}</div>
           </ion-col>
           <ion-col>
-            <div class="small-text">{{ item.apellido }}</div>
+            <div class="small-text">{{ item.lastname }}</div>
           </ion-col>
           <ion-col>
-            <div class="small-text">{{ item.carrera }}</div>
+            <div class="small-text">{{ item.career }}</div>
           </ion-col>
           <ion-col>
-            <div class="small-text">{{ item.semestre }}</div>
+            <div class="small-text">{{ item.semester }}</div>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -66,7 +66,7 @@ export default {
   },
   mounted() {
     const db = getDatabase();
-    const starCountRef = ref(db, "usuario/");
+    const starCountRef = ref(db, "user/");
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
       console.log(data);
@@ -81,7 +81,7 @@ export default {
   },
   data() {
     return {
-      listaUsuarios: [{ carrera: "", nombre: "", semestre: "" }],
+      listaUsuarios: [{ career: "", name: "", semester: "" }],
       listaKeys: []
     }
   }
